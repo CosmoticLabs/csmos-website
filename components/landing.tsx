@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Landing() {
   return (
-    <div className="max-w-[90rem] mx-auto p-6">
-      <div className="flex flex-col md:flex-row gap-3 md:gap-0">
+    <div className="max-w-[90rem] mx-auto p-6 min-h-[calc(100vh-var(--nextra-navbar-height))] flex w-full flex-col">
+      <div className="flex flex-col md:flex-row gap-4 grow">
         <div className="flex flex-col text-center md:text-left items-center md:items-start justify-center gap-1">
           <h1 className="text-5xl font-bold [text-wrap:balance]">
             Meet the{" "}
@@ -17,13 +17,13 @@ export default function Landing() {
             bot seem useless.
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center text-center gap-1 flex-grow">
+        <div className="flex flex-col items-center justify-center text-center gap-1 grow">
           <div className="animate-vert-move rounded-full bg-neutral-800">
             <Image
               src="/logo.png"
               alt="csmos logo"
-              width={300}
-              height={300}
+              width={350}
+              height={350}
               className="rounded-full"
             />
           </div>
