@@ -18,7 +18,7 @@ export default function Landing() {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center text-center gap-1 grow">
-          <div className="animate-vert-move rounded-full bg-neutral-800">
+          <div className="animate-vert-move rounded-full bg-neutral-100 dark:bg-neutral-800">
             <Image
               src="/logo.png"
               alt="csmos logo"
