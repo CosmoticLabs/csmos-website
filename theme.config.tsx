@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { DocsThemeConfig } from "nextra-theme-docs";
 import React from "react";
 
@@ -21,34 +22,41 @@ const config: DocsThemeConfig = {
   footer: {
     text: "Nextra Docs Template",
   },
-  useNextSeoProps: () => ({
-    titleTemplate: "%s — csmos",
-    additionalLinkTags: [
-      {
-        href: "/apple-icon-180x180.png",
-        rel: "apple-touch-icon",
-        sizes: "180x180",
-      },
-      {
-        href: "/android-icon-192x192.png",
-        rel: "icon",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        href: "/favicon-32x32.png",
-        rel: "icon",
-        sizes: "32x32",
-        type: "image/png",
-      },
-      {
-        href: "/favicon-16x16.png",
-        rel: "icon",
-        sizes: "16x16",
-        type: "image/png",
-      },
-    ],
-  }),
+  useNextSeoProps: () => {
+    const { asPath } = useRouter();
+    let titleTemplate: string | undefined = "%s — csmos";
+
+    if (asPath === "/") titleTemplate = undefined;
+
+    return {
+      titleTemplate,
+      additionalLinkTags: [
+        {
+          href: "/apple-icon-180x180.png",
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+        },
+        {
+          href: "/android-icon-192x192.png",
+          rel: "icon",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          href: "/favicon-32x32.png",
+          rel: "icon",
+          sizes: "32x32",
+          type: "image/png",
+        },
+        {
+          href: "/favicon-16x16.png",
+          rel: "icon",
+          sizes: "16x16",
+          type: "image/png",
+        },
+      ],
+    };
+  },
   primaryHue: 291,
 };
 

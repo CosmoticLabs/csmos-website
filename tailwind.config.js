@@ -6,7 +6,24 @@ module.exports = {
     "./theme.config.tsx",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        "vert-move": {
+          "0%": {
+            transform: "translateY(-5px)",
+          },
+          "50%": {
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            transform: "translateY(-5px)",
+          },
+        },
+      },
+      animation: {
+        "vert-move": "vert-move 3s ease-in-out infinite",
+      },
+    },
   },
   plugins: [],
   darkMode: "class",
