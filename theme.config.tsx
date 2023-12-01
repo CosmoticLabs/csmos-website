@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { DocsThemeConfig } from "nextra-theme-docs";
 import React from "react";
+import Footer from "./components/footer";
 
 const config: DocsThemeConfig = {
   logo: <Image src="/logo.png" alt="csmos logo" width={40} height={40} />,
@@ -20,7 +21,7 @@ const config: DocsThemeConfig = {
     labels: "feedback",
   },
   footer: {
-    text: "Nextra Docs Template",
+    text: <Footer />,
   },
   useNextSeoProps: () => {
     return {

@@ -5,7 +5,7 @@ export default function Landing() {
     <div className="max-w-[90rem] mx-auto p-6 min-h-[calc(100vh-var(--nextra-navbar-height))] flex w-full flex-col">
       <div className="flex flex-col md:flex-row gap-4 grow">
         <div className="flex flex-col text-center md:text-left items-center md:items-start justify-center gap-1">
-          <h1 className="text-5xl font-bold [text-wrap:balance]">
+          <h1 className="text-5xl font-bold [text-wrap:balance] tracking-tighter">
             Meet the{" "}
             <span className="bg-gradient-to-b from-fuchsia-500 to-fuchsia-800 bg-clip-text text-transparent">
               only Discord bot you need
