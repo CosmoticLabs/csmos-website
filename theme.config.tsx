@@ -23,13 +23,8 @@ const config: DocsThemeConfig = {
     text: "Nextra Docs Template",
   },
   useNextSeoProps: () => {
-    const { asPath } = useRouter();
-    let titleTemplate: string | undefined = "%s — csmos";
-
-    if (asPath === "/") titleTemplate = undefined;
-
     return {
-      titleTemplate,
+      titleTemplate: "%s — csmos",
       additionalLinkTags: [
         {
           href: "/apple-icon-180x180.png",
