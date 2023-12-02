@@ -12,7 +12,10 @@
     "title": "Documentation"
   },
   "about": {
+    "type": "page",
     "title": "About",
-    "type": "page"
+    "theme": {
+      "typesetting": "article"
+    }
   }
 }
