@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cbs article h1,
+.cbs article h2 {
+  @apply tracking-tighter;
+}
