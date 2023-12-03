@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
       </h2>
       <div>
         <Link
-          className="flex items-center gap-1 hover:opacity-75 w-fit"
+          className="flex items-center justify-center gap-1 hover:opacity-75 md:justify-normal md:w-fit"
           href="/"
         >
           <Image src="/logo.png" alt="csmos logo" width={50} height={50} />
