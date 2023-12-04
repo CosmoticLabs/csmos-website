@@ -1,3 +1,4 @@
+import * as Tooltip from "@radix-ui/react-tooltip";
 import Image from "next/image";
 
 export default function Landing() {
@@ -17,6 +18,26 @@ export default function Landing() {
             csmos is a multipurpose Discord bot that makes every other Discord
             bot seem useless.
           </p>
+          <Tooltip.Provider>
+            <Tooltip.Root>
+              <Tooltip.Trigger asChild>
+                <span tabIndex={0}>
+                  <button className="bg-gradient-to-b from-fuchsia-600 to-fuchsia-800 px-3 py-1 rounded-md opacity-50 cursor-not-allowed pointer-events-none">
+                    Add csmos to your Discord server
+                  </button>
+                </span>
+              </Tooltip.Trigger>
+              <Tooltip.Portal>
+                <Tooltip.Content
+                  className="z-50 overflow-hidden rounded-md bg-neutral-900 px-3 py-1.5 text-sm shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 w-[var(--radix-tooltip-trigger-width)] text-center mt-1"
+                  side="bottom"
+                >
+                  csmos is still in its development stage, so you cannot invite
+                  it right now.
+                </Tooltip.Content>
+              </Tooltip.Portal>
+            </Tooltip.Root>
+          </Tooltip.Provider>
         </div>
         <div className="flex flex-col items-center justify-center text-center gap-1 grow">
           <div className="animate-vert-move rounded-full bg-neutral-100 dark:bg-neutral-800">
